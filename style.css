@@ -1,0 +1,74 @@
+body{
+    margin:0;
+    padding:0;
+  }
+  
+  .hero{
+    background:#1a1a1a;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+  
+  .hero svg{
+    width:100%;
+    transform:scale(1.05);
+  }
+  
+  .key, .keyhead{
+    transform:scale(0.8);
+    transform-origin:50% 50%;
+  } 
+  
+  .gear{
+    animation:gear-rotate 10s forwards linear infinite;
+  }
+  
+  @keyframes gear-rotate{
+    from{transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+  }
+  
+  #left path,#right path{
+    fill:#333333;
+    opacity:1;
+  }
+  
+  #left path:hover, #right path:hover{
+   opacity:0.5;
+  }
+  
+  .top-left path, .bottom-left path, .top-right path, .bottom-right path{
+    fill:#333333;
+  }
+  
+  .key-left .key1, .key-right .key2 , .key-top .key3, .key-btm .key4{
+    transition:all 2s ease;
+    transform-origin:960px 540px;
+  }
+  
+  .key-left .active{
+    transform:translateX(105px);
+  }
+  
+  .key-right .active{
+    transform:translateX(-105px);
+  }
+  
+  .key-top .active{
+    transform:translateY(105px);
+  }
+  
+  .key-btm .active{
+    transform:translateY(-105px);
+  }
+  .main{
+    transform:rotate(0deg);
+      transform-origin:960px 540px;
+    transition:all 2s ease;
+  }
+  
+  /*  style="fill:#00FFFF;" */
